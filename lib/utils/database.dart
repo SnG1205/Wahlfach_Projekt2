@@ -20,7 +20,7 @@ class BankingDatabase{
       );
       db.execute('CREATE TABLE balance(balance DOUBLE)');
       db.execute('INSERT INTO balance VALUES(1000000)');
-      db.execute('INSERT INTO clients(first_name, last_name, address, is_employee) VALUES(?, ?, ?, ?)', ['Serhi', 'Holiev', 'Home', 1]);
+      db.execute('INSERT INTO clients(first_name, last_name, address, is_employee) VALUES(?, ?, ?, ?)', ['Serhii', 'Holiev', 'Home', 1]);
     },
     version: 1,
     );
@@ -69,7 +69,7 @@ class BankingDatabase{
   Future<List<User>> getAllClients(Future<Database> database) async {
     final db = await database;
 
-    final List<Map<String, dynamic>> maps = await db.query('clients');
+    final List<Map<String, dynamic>> maps = await db.query('clients', where: 'is_employee = ?', whereArgs: [0]);
 
     return List.generate(maps.length, (i){
       return User(
