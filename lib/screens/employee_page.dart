@@ -159,7 +159,7 @@ class _BodyState extends State<BodyStateful>{
             style: const ButtonStyle(
               minimumSize: MaterialStatePropertyAll(Size(200, 50)),
             ),
-            child: const Text('Create User'),
+            child: const Text('Create Client'),
           )
         ),
         Padding(
