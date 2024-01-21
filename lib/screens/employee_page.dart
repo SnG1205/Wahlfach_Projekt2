@@ -170,7 +170,7 @@ class _BodyState extends State<BodyStateful>{
               overlayColor: MaterialStatePropertyAll(Colors.purple[300]),
               minimumSize: const MaterialStatePropertyAll(Size(200, 50)),
             ),
-            child: const Text('Display clients'),
+            child: const Text('Display Clients'),
           )
         ),
         Padding(
