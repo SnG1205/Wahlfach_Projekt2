@@ -1,6 +1,6 @@
-# wahlfach_projekt
+# Wahlfach_Projekt2
 
-A new Flutter project.
+Flutter application that was aimed to run on iOS devices. Application itself is a so-called "Stock Application". Users can search for various stocks on the market (lookup is made with the help of open API) and buy shares in the process. All the transactions are being saved in database, so that user can check them later.
 
 ## Getting Started
 
