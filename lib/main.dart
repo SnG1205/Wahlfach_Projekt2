@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'screens/home_page.dart';
+import 'screens/android/home_page.dart';
 
 void main() {
   runApp(const MyApp());

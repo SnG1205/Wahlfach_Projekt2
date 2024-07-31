@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:wahlfach_projekt/screens/employee_page.dart';
-import 'package:wahlfach_projekt/screens/user_page.dart';
+import 'package:wahlfach_projekt/screens/android/employee_page.dart';
+import 'package:wahlfach_projekt/screens/android/user_page.dart';
 import 'package:wahlfach_projekt/utils/database.dart';
 import 'package:wahlfach_projekt/entities/user.dart';
 

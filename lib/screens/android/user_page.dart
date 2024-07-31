@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wahlfach_projekt/screens/buy_stock_page.dart';
+import 'package:wahlfach_projekt/screens/android/buy_stock_page.dart';
 import 'package:wahlfach_projekt/utils/database.dart';
-import 'package:wahlfach_projekt/screens/depot_page.dart';
+import 'package:wahlfach_projekt/screens/android/depot_page.dart';
 import 'package:wahlfach_projekt/entities/stock.dart';
 import 'package:wahlfach_projekt/entities/user.dart';
 

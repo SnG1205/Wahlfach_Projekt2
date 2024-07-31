@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wahlfach_projekt/screens/sell_stock_page.dart';
+import 'package:wahlfach_projekt/screens/android/sell_stock_page.dart';
 import 'package:wahlfach_projekt/entities/stock.dart';
 import 'package:wahlfach_projekt/entities/user.dart';
 
