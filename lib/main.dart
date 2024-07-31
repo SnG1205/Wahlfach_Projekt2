@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wahlfach_projekt/screens/ios/home_page.dart';
+import 'screens/android/home_page.dart';
 import 'screens/android/home_page.dart';
 
 void main() {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Platform.isIOS
         ? CupertinoApp(
-            home: CupertinoHomeScreen(),
+            home: HomePageIOS(),
           )
         : MaterialApp(
             title: 'Flutter Demo',
