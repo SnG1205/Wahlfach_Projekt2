@@ -51,38 +51,40 @@ class _BodyState extends State<HomePageBody>{
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.center,
-      child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Column(
-            children: [
-              const Padding(
-                padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                child: Text(
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
-                    'Please enter Your credentials to login into Your account.'
+      child: Center(
+        child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Column(
+              children: [
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                  child: Text(
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      'Please enter Your credentials to login into Your account.'
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 15, 0, 20),
-                child: CupertinoTextField(
-                  controller: usernameController,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 15, 0, 20),
+                  child: CupertinoTextField(
+                    controller: usernameController,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                child: CupertinoTextField(
-                  controller: passwordController,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  child: CupertinoTextField(
+                    controller: passwordController,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 15),
-                child: CupertinoButton(
-                  onPressed: navigate,
-                  child: const Text('Login', style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold, fontSize: 20)),
+                Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 15),
+                    child: CupertinoButton(
+                      onPressed: navigate,
+                      child: const Text('Login', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                    )
                 )
-              )
-            ],)),
+              ],)),
+      )
     );
   }
 
