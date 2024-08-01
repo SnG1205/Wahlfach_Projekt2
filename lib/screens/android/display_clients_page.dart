@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wahlfach_projekt/utils/database.dart';
 import 'package:wahlfach_projekt/entities/user.dart';
-import 'package:wahlfach_projekt/list_views/user_list.dart';
+import 'package:wahlfach_projekt/list_views/android/user_list.dart';
 
 class DisplayClientsPage extends StatelessWidget{
   final List<User> users;

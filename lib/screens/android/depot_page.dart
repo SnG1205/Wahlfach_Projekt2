@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wahlfach_projekt/utils/database.dart';
 import 'package:wahlfach_projekt/entities/stock.dart';
-import 'package:wahlfach_projekt/list_views/stock_list.dart';
+import 'package:wahlfach_projekt/list_views/android/stock_list.dart';
 import 'package:wahlfach_projekt/entities/user.dart';
 
 class DepotPage extends StatelessWidget{

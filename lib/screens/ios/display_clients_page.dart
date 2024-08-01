@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../entities/user.dart';
-import '../../list_views/user_list.dart';
+import '../../list_views/ios/user_list.dart';
 
 class DisplayClientsPageIOS extends StatelessWidget{
   final List<User> users;
@@ -35,6 +35,6 @@ class _BodyState extends State<BodyStateful> {
 
   @override
   Widget build(BuildContext context) {
-    return UserList(users);
+    return UserListIOS(users);
   }
 }
