@@ -37,8 +37,6 @@ class _BodyState extends State<BodyStateful>{
 
   _BodyState(this.users);
 
-  final bankDAO = BankingDatabase();
-
   @override
   Widget build(BuildContext context) {
     return UserList(users);

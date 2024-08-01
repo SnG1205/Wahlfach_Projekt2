@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:wahlfach_projekt/screens/android/employee_page.dart';
-import 'package:wahlfach_projekt/screens/android/user_page.dart';
+import 'package:wahlfach_projekt/screens/ios/employee_page.dart';
+import 'package:wahlfach_projekt/screens/ios/user_page.dart';
 import 'package:wahlfach_projekt/utils/database.dart';
 import 'package:wahlfach_projekt/entities/user.dart';
 
@@ -11,6 +11,9 @@ class HomePageIOS extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text("Banking App"),
+      ),
       child: HomePageBody(),
     );
   }
@@ -31,10 +34,10 @@ class _BodyState extends State<HomePageBody>{
     try{
       User? user = await bankDAO.getClientByFullName(database, usernameController.text, passwordController.text);
       if(user!.isEmployee == 1){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => EmployeePage(user)));
+        Navigator.push(context, CupertinoPageRoute(builder: (context) => EmployeePageIOS(user)));
       }
       else{
-        Navigator.push(context, MaterialPageRoute(builder: (context) => UserPage(user)));
+        Navigator.push(context, CupertinoPageRoute(builder: (context) => UserPageIOS(user)));
       }
       usernameController.clear();
       passwordController.clear();
@@ -53,7 +56,7 @@ class _BodyState extends State<HomePageBody>{
       alignment: Alignment.center,
       child: Center(
         child: Padding(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.fromLTRB(20, 150, 20 , 0),
             child: Column(
               children: [
                 const Padding(
