@@ -92,6 +92,8 @@ class _BodyState extends State<BodyStateful>{
         Padding(
             padding: const EdgeInsets.fromLTRB(50, 15, 50, 15),
             child: CupertinoTextField(
+              autocorrect: false,
+              placeholder: 'Amount',
               controller: amountController,
               /*decoration: const InputDecoration(
                   border: OutlineInputBorder(),

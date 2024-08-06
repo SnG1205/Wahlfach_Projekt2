@@ -70,16 +70,19 @@ class _BodyState extends State<BodyStateful> {
             Padding(
                 padding: const EdgeInsets.fromLTRB(30, 40, 30, 15),
                 child: CupertinoTextField(
+                  placeholder: 'First name',
                   controller: firstNameController,
                 )),
             Padding(
                 padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
                 child: CupertinoTextField(
+                  placeholder: 'Last name',
                   controller: lastNameController,
                 )),
             Padding(
                 padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
                 child: CupertinoTextField(
+                  placeholder: 'Address',
                   controller: addressController,
                 )),
             Padding(

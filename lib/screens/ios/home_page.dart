@@ -68,14 +68,18 @@ class _BodyState extends State<HomePageBody>{
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 15, 0, 20),
+                  padding: const EdgeInsets.fromLTRB(50, 15, 50, 20),
                   child: CupertinoTextField(
+                    autocorrect: false,
+                    placeholder: 'First name',
                     controller: usernameController,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
                   child: CupertinoTextField(
+                    autocorrect: false,
+                    placeholder: 'Last name',
                     controller: passwordController,
                   ),
                 ),
@@ -83,7 +87,7 @@ class _BodyState extends State<HomePageBody>{
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 15),
                     child: CupertinoButton(
                       onPressed: navigate,
-                      child: const Text('Login', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                      child: const Text('Log in', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                     )
                 )
               ],)),

@@ -19,6 +19,16 @@ class StockListIOS extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return stockList.isEmpty ?
+    Column(
+      children: [
+        header(),
+        Text(
+            style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+            'Total sum of Your depot is: ${calculateDepot().toStringAsFixed(2)}'),
+      ],
+    ) :
+    fullBody(stockList, context);
     return CupertinoFormSection.insetGrouped(
       header: Padding(
         padding: EdgeInsets.fromLTRB(0, 200, 0, 0),
@@ -77,6 +87,73 @@ class StockListIOS extends StatelessWidget {
             (index) =>
                 buildCupertinoFormRow(stockList[index], index + 1, context))
       ],
+    );
+  }
+
+  Widget header(){
+    return CupertinoFormRow(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(0, 150, 0, 0),
+          child: Row(
+            children: [
+              Container(
+                //color: Colors.white,
+                width: 50,
+                height: 50,
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    'Nr.'),
+              ),
+              Container(
+                //color: Colors.white,
+                width: 100,
+                height: 50,
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  'Symbols',
+                ),
+              ),
+              Container(
+                //color: Colors.white,
+                width: 100,
+                height: 50,
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                child: const Text(
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  'Amount',
+                ),
+              ),
+              Container(
+                //color: Colors.white,
+                width: 100,
+                height: 50,
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                child: const Text(
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  'Price',
+                ),
+              ),
+            ],
+          ),
+        )
+    );
+  }
+
+  Widget fullBody(List<Stock> stocks, BuildContext context){
+    return CupertinoFormSection.insetGrouped(
+      header: header(),
+        footer: Text(
+            style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+            'Total sum of Your depot is: ${calculateDepot().toStringAsFixed(2)}'),
+        children: [...List.generate(
+        stocks.length,
+        (index) =>
+        buildCupertinoFormRow(stocks[index], index + 1, context))
+    ],
     );
   }
 

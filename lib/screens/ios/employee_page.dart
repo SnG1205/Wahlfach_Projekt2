@@ -126,6 +126,8 @@ class _BodyState extends State<BodyStateful>{
         Padding(
             padding: const EdgeInsets.fromLTRB(70, 160, 70, 15),
             child: CupertinoTextField(
+              autocorrect: false,
+              placeholder: 'Client id',
               controller: clientIdController,
             )
         ),

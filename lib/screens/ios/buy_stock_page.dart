@@ -118,6 +118,8 @@ class _BodyState extends State<BodyStateful>{
               Padding(
                   padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
                   child: CupertinoTextField(
+                    autocorrect: false,
+                    placeholder: 'Symbols',
                     controller: symbolsController,
                     suffix: CupertinoButton(
                       child: Icon(CupertinoIcons.search),
@@ -136,6 +138,8 @@ class _BodyState extends State<BodyStateful>{
               Padding(
                   padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
                   child: CupertinoTextField(
+                    autocorrect: false,
+                    placeholder: 'Amount',
                     controller: amountController,
                     /*decoration: const InputDecoration(
                     border: OutlineInputBorder(),
