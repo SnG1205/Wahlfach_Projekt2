@@ -8,7 +8,6 @@ class BankApi{
 
   Future<StockApi> fetchStockPrice(String symbols) async {
     var formatter = DateFormat('yyyy-MM-dd');
-    DateTime.now().subtract(const Duration(days: 2));
     final currentDate = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     final apiDate = currentDate.subtract(const Duration(days: 5)); //Note from 06.08: for some reason stopped working if date is earlier than 3 days before actual. Either new terms of use or some problem in API.
     final formattedDate = formatter.format(apiDate); //Note from 07.08 for some reason API doesn't provide any data from 03.08, mb date should be changed to static one :(
