@@ -204,7 +204,7 @@ class StockListIOS extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
               child: Text(
                 style: const TextStyle(fontSize: 20),
-                (stock.price.toString()),
+                (stock.price.toStringAsFixed(2)),
               ),
             ),
           ],
